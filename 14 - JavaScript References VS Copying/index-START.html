@@ -20,6 +20,7 @@
     name = 'wesley';
     console.log(name, name2);
 
+
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
 
@@ -50,17 +51,17 @@
 
     // or create a new array and concat the old one in
 
-
     const team3 = [].concat(players);
 
 
     // or use the new ES6 Spread
 
     const team4 = [...players];
-    team4[3] = 'heee hwaaa';
+    team[3] = 'heee hwaa';
     console.log(team4);
 
     const team5 = Array.from(players);
+
 
     // now when we update it, the original one isn't changed
 
@@ -73,13 +74,14 @@
     };
 
     // and think we make a copy:
+
     const captain = person;
     captain.number = 99;
     console.log(captain);
 
     // how do we take a copy instead?
 
-    const cap2 = Object.assign({}, person, {nubmer:99, age:12});
+    const cap2 = Object.assign({}, person, {number:99, age:12});
     console.log(cap2);
 
 
@@ -100,12 +102,15 @@
     };
     console.clear()
     console.log(wes);
-    wes.social.twitter = '@coolman';
-    const dev = Object.assign({}, wes);
+
+
+  //  const dev = Object.assign({}, wes);
+  //  dev.name = 'wesley';
 
     const dev2 = JSON.parse(JSON.stringify(wes));
+    dev2.social.twitter = '@coolman';
 
-    console.log(dev);
+    console.log(wes);
     console.log(dev2);
 
   </script>
